@@ -90,7 +90,7 @@ class Grids extends React.Component <Props, State> {
 
     return (
       <>
-        <div className='px-4 font-itatic text-uppercase font-weight-bold text-dark h3 my-3'>
+        <div className='px-4 font-italic text-uppercase font-weight-bold text-dark h3 my-3'>
           {this.state.gridTitle}:
         </div>
         <div className='w-100 d-flex flex-wrap justify-content-start px-2'>

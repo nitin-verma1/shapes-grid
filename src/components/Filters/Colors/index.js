@@ -48,8 +48,8 @@ class Colors extends React.Component <Props, State> {
           <div 
             onClick={this.handleColorClick(color)} 
             key={`${color}-${index}`} 
-            className={`p-3 mx-2 border ${this.state.colors.includes(color) ? 'border-dark' : 'border-light'}`} 
-            style={{ backgroundColor: color, cursor: 'pointer' }}
+            className={`p-3 mx-2 cursor-pointer ${this.state.colors.includes(color) ? 'color-box-border' : 'border border-light'}`} 
+            style={{ backgroundColor: color }}
           />
         ))}
       </div>

@@ -46,10 +46,9 @@ class Shapes extends React.Component <Props, State> {
       <div className='d-flex flex-wrap'>
         {this.props.shapesHeadings.map((shape: string, index: number) => (
           <div 
-            style={{ cursor: 'pointer' }} 
             onClick={this.handleShapeClick(shape)} 
             key={`${shape}-${index}`} 
-            className={`${this.state.shapes.includes(shape) ? 'text-dark' : 'text-secondary'}  text-uppercase font-italic mx-2 font-weight-bold`}
+            className={`${this.state.shapes.includes(shape) ? 'text-dark' : 'text-secondary'} cursor-pointer text-uppercase font-italic mx-2 font-weight-bold`}
           >
             {shape}
           </div>
