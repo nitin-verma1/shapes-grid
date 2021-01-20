@@ -49,13 +49,23 @@ class Grids extends React.Component <Props, State> {
       gridTitle = `All ${colorFilters[0]} items`;
     } else if (totalColorCount === cFilterLen && sFilterLen === 1) {
       gridTitle = `All ${shapeFilters[0]} items`
-    } else if (cFilterLen > 1 && cFilterLen < totalColorCount && sFilterLen === 1 ) {
+    } else if ((cFilterLen > 1 && cFilterLen < totalColorCount) && sFilterLen === 1 ) {
       gridTitle = `Multiple ${shapeFilters[0]} items`;
-    } else if (sFilterLen > 1 && cFilterLen < totalShapeCount && cFilterLen === 1) {
+    } else if ((sFilterLen > 1 && cFilterLen < totalShapeCount) && cFilterLen === 1) {
       gridTitle = `Multiple ${colorFilters[0]} items`;
     } else if (sFilterLen === 1 && cFilterLen === 1){
       gridTitle = `${shapeFilters[0]} ${colorFilters[0]} items`;
-    } else if (sFilterLen === cFilterLen) {
+    } else if ((cFilterLen === 1 && sFilterLen === 0)) {
+      gridTitle = `All ${colorFilters[0]} items`;
+    } else if ((cFilterLen === 0 && sFilterLen === 1)) {
+      gridTitle = `All ${shapeFilters[0]} items`;
+    } else if ((sFilterLen > 1 && cFilterLen > 1) && sFilterLen === cFilterLen) {
+      gridTitle = 'Multiple items';
+    } else if ((sFilterLen > 1 && cFilterLen === 0) || (cFilterLen > 1 && sFilterLen === 0)) {
+      gridTitle = 'Multiple items';
+    } else if ((sFilterLen > 1 && sFilterLen < totalShapeCount) && cFilterLen > 1) {
+      gridTitle = 'Multiple items';
+    } else if ((cFilterLen > 1 && cFilterLen < totalColorCount) && sFilterLen > 1) {
       gridTitle = 'Multiple items';
     }
 
