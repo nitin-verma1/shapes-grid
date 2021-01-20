@@ -6,3 +6,4 @@ First Clone this repository
 
 ### Start Application
  - Run : npm start
+### Open localhost:3000 on your browser
